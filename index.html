@@ -12,61 +12,56 @@
 
 <body>
 
-    <div id="main">
-        <h1>My Tic Tac Toe prototype</h1>
+    <!--if the screen since is small, on glaxy fold force rotate of phone, scan viewport set relevent popup. add email integration on the bottom. -->
+    <!--section that we want to use, goal is to implement the script to work on this gameboard-->
 
-        <!-- Game Instructions -->
+    <!-- Game Instructions -->
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
         <p id="ins">Start the game by tapping on a box.
-            <br><br>Player one starts as X and player Two starts as 0.
         </p>
-        <!-- Space to show player turn -->
+        <p id="print">Player X goes first!</p>
+    </div>
 
-        <p id="print">Player X goes first!</p> </div>
-
-some changes soem commits to test it out 
-
-        <!--if the screen since is small, on glaxy fold force rotate of phone, scan viewport set relevent popup. add email integration on the bottom. -->
-        <br><br>
-        <!--section that we want to use, goal is to implement the script to work on this gameboard-->
-        <section>
-            <h1 class="game--title">Tic Tac Toe</h1>
-            <div class="game--container" style="background-color: blueviolet; color: brown;">
-                <div class="cell">
-                    <input type="text" id="b1" onclick="myfunc_3(); myfunc();" readonly>
-                </div>
-                <div class="cell">
-                    <input type="text" id="b2" onclick="myfunc_4(); myfunc();" readonly>
-                </div>
-                <div class="cell">
-                    <input type="text" id="b3" onclick="myfunc_5(); myfunc();" readonly>
-                </div>
-                <div class="cell">
-                    <input type="text" id="b4" onclick="myfunc_6(); myfunc();" readonly>
-                </div>
-                <div class="cell">
-                    <input type="text" id="b5" onclick="myfunc_7(); myfunc();" readonly>
-                </div>
-                <div class="cell">
-                    <input type="text" id="b6" onclick="myfunc_8(); myfunc();" readonly>
-                </div>
-                <div class="cell">
-                    <input type="text" id="b7" onclick="myfunc_9(); myfunc();" readonly>
-                </div>
-                <div class="cell">
-                    <input type="text" id="b8" onclick="myfunc_10();myfunc();" readonly>
-                </div>
-                <div class="cell">
-                    <input type="text" id="b9" onclick="myfunc_11();myfunc();" readonly>
-                </div>
+    <!--Game board section-->
+    <section>
+        <div class="game--container">
+            <div class="cell">
+                <input type="text" id="b1" onclick="myfunc_3(); myfunc();" readonly>
             </div>
-            <h2 class="game--status"></h2>
+            <div class="cell">
+                <input type="text" id="b2" onclick="myfunc_4(); myfunc();" readonly>
+            </div>
+            <div class="cell">
+                <input type="text" id="b3" onclick="myfunc_5(); myfunc();" readonly>
+            </div>
+            <div class="cell">
+                <input type="text" id="b4" onclick="myfunc_6(); myfunc();" readonly>
+            </div>
+            <div class="cell">
+                <input type="text" id="b5" onclick="myfunc_7(); myfunc();" readonly>
+            </div>
+            <div class="cell">
+                <input type="text" id="b6" onclick="myfunc_8(); myfunc();" readonly>
+            </div>
+            <div class="cell">
+                <input type="text" id="b7" onclick="myfunc_9(); myfunc();" readonly>
+            </div>
+            <div class="cell">
+                <input type="text" id="b8" onclick="myfunc_10();myfunc();" readonly>
+            </div>
+            <div class="cell">
+                <input type="text" id="b9" onclick="myfunc_11();myfunc();" readonly>
+            </div>
+        </div>
+        <h2 class="game--status"></h2>
 
-            <button id="but" onclick="myfunc_2()">
-                RESET BOARD </button>
-        </section>
+        <button id="but" onclick="myfunc_2()">
+            RESET </button>
+    </section>
 
 
-        <script src="script.js"> </script>
+    <script src="script.js"> </script>
 </body>
 
 </html>

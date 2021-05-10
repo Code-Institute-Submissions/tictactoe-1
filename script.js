@@ -112,7 +112,11 @@ function myfunc() {
         document.getElementById("b9").disabled = true;
         window.alert('Player X won');
     }
-  
+ //this whole thing goes thru the whole board and checks wheter player x has made a winning combination
+ 
+ 
+
+
     // Checking of Player X finsh
     // Checking for Player 0 starts, Is player 0 won or
     // not and after that disabled all the other fields
@@ -213,7 +217,10 @@ function myfunc() {
         window.alert('Player 0 won');
     }
   
-    // Checking of Player 0 finsh
+    // Checking of Player 0 finsh. same as the x one it just enumares the whole board and checks if player 0 has made a winning combination
+
+
+
     // Here, Checking about Tie
     else if ((b1 == 'X' || b1 == '0') && (b2 == 'X' 
         || b2 == '0') && (b3 == 'X' || b3 == '0') && 
@@ -226,7 +233,9 @@ function myfunc() {
             window.alert('Match Tie');
     }
     else {
-  
+        
+
+        //if there is no tie is keeps going and changes the players turn.
         // Here, Printing Result
         if (flag == 1) {
             document.getElementById('print')
