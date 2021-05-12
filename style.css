@@ -9,19 +9,13 @@ body {
     text-align: center;
     align-items: center;
     color: orange;
-    
 }
+/* font sizing for the text */
+#print {font-size: 3vh;}
+#title {font-size: 4vh;}
+#subtitle {font-size: 3vh;}
 
-#title {
-    font-size: 4vh;
-}
-
-#subtitle {
-    font-size: 3vh;
-}
-
-#print { font-size: 4ch;}
-
+/* sction styling, making sure gameboard iscenter alwasy ******/
 section {
     text-align: center;
 }
@@ -32,8 +26,6 @@ section {
     width: 306px;
     margin: 50px auto;
     background-color: blueviolet;
-    border-radius: 5px;
-    border:rgb(51, 39, 131)
 }
 
 .cell {
@@ -47,6 +39,7 @@ section {
     font-size: 60px;
 }
 
+
 /* Reset Button */
 
 #but {
@@ -55,12 +48,11 @@ section {
     height: 60px;
     border: 1px solid rgb(51, 39, 131);
     margin: auto;
-   /* border-radius: 5px; this makes it round */ 
+    border-radius: 4px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: blueviolet;
-    border-color: orange;
     color: orange;
-    font-size: 2vh;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -68,17 +60,19 @@ section {
 
 #ins {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: orange;
+    color:orange;
     font-size: 2vh;
 }
 
 /* 3*3 Grid */
 
-#b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9 {
+#b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9 
+{
     width: 80px;
     height: 60px;
     background-color: darkorange;
     border-radius: 5px;
     font-size: 7vh;
     text-align: center;
+    cursor: pointer;
 }

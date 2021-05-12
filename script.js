@@ -1,7 +1,7 @@
-// Function called whenever user tab on any box, this is the main game function.
+// Function called whenever user tab on any box, this is the main game function, that handles all the game logic. its a big nested mess but it works.
 function myfunc() {
-  
-    // Setting DOM to all boxes or input field
+
+    // Setting DOM to all boxes or input field, function creates the board.
     var b1, b1, b3, b4, b5, b6, b7, b8, b9;
     b1 = document.getElementById("b1").value;
     b2 = document.getElementById("b2").value;
@@ -12,9 +12,9 @@ function myfunc() {
     b7 = document.getElementById("b7").value;
     b8 = document.getElementById("b8").value;
     b9 = document.getElementById("b9").value;
-  
+
     // Checking if Player X won or not and after 
-    // that disabled all the other fields
+    // that disabled all the other fields if x has won. 
     if ((b1 == 'x' || b1 == 'X') && (b2 == 'x' ||
         b2 == 'X') && (b3 == 'x' || b3 == 'X')) {
         document.getElementById('print')
@@ -37,10 +37,10 @@ function myfunc() {
         document.getElementById("b6").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
-  
-        window.alert('Player X won');
+
+//        window.alert('Player X won');
     }
-    else if ((b7 == 'x' || b7 == 'X') && (b8 == 'x' || 
+    else if ((b7 == 'x' || b7 == 'X') && (b8 == 'x' ||
         b8 == 'X') && (b9 == 'x' || b9 == 'X')) {
         document.getElementById('print')
             .innerHTML = "Player X won";
@@ -50,9 +50,9 @@ function myfunc() {
         document.getElementById("b4").disabled = true;
         document.getElementById("b5").disabled = true;
         document.getElementById("b6").disabled = true;
-        window.alert('Player X won');
+     //   window.alert('Player X won');
     }
-    else if ((b3 == 'x' || b3 == 'X') && (b6 == 'x' || 
+    else if ((b3 == 'x' || b3 == 'X') && (b6 == 'x' ||
         b6 == 'X') && (b9 == 'x' || b9 == 'X')) {
         document.getElementById('print')
             .innerHTML = "Player X won";
@@ -62,9 +62,9 @@ function myfunc() {
         document.getElementById("b5").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
-        window.alert('Player X won');
+     //   window.alert('Player X won');
     }
-    else if ((b1 == 'x' || b1 == 'X') && (b5 == 'x' || 
+    else if ((b1 == 'x' || b1 == 'X') && (b5 == 'x' ||
         b5 == 'X') && (b9 == 'x' || b9 == 'X')) {
         document.getElementById('print')
             .innerHTML = "Player X won";
@@ -74,9 +74,9 @@ function myfunc() {
         document.getElementById("b6").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
-        window.alert('Player X won');
+     //   window.alert('Player X won');
     }
-    else if ((b3 == 'x' || b3 == 'X') && (b5 == 'x' || 
+    else if ((b3 == 'x' || b3 == 'X') && (b5 == 'x' ||
         b5 == 'X') && (b7 == 'x' || b7 == 'X')) {
         document.getElementById('print')
             .innerHTML = "Player X won";
@@ -86,9 +86,9 @@ function myfunc() {
         document.getElementById("b6").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
-        window.alert('Player X won');
+     //   window.alert('Player X won');
     }
-    else if ((b2 == 'x' || b2 == 'X') && (b5 == 'x' || 
+    else if ((b2 == 'x' || b2 == 'X') && (b5 == 'x' ||
         b5 == 'X') && (b8 == 'x' || b8 == 'X')) {
         document.getElementById('print')
             .innerHTML = "Player X won";
@@ -98,9 +98,9 @@ function myfunc() {
         document.getElementById("b6").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b9").disabled = true;
-        window.alert('Player X won');
+     //   window.alert('Player X won');
     }
-    else if ((b4 == 'x' || b4 == 'X') && (b5 == 'x' || 
+    else if ((b4 == 'x' || b4 == 'X') && (b5 == 'x' ||
         b5 == 'X') && (b6 == 'x' || b6 == 'X')) {
         document.getElementById('print')
             .innerHTML = "Player X won";
@@ -110,17 +110,15 @@ function myfunc() {
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
-        window.alert('Player X won');
+      //  window.alert('Player X won');
     }
- //this whole thing goes thru the whole board and checks wheter player x has made a winning combination
- 
- 
+    //this whole thing goes thru the whole board and checks wheter player x has made a winning combination. it uses primitve is else statements to chheck the whole board state.
+    // Checking of Player X finsh ends.
 
 
-    // Checking of Player X finsh
     // Checking for Player 0 starts, Is player 0 won or
-    // not and after that disabled all the other fields
-    else if ((b1 == '0' || b1 == '0') && (b2 == '0' || 
+    // not and after that disabled all the other fields. Same for player x, goes trough the whole board to check if a space is taken. Also does a check to see if the players combination results ina a win, if so it calls and alert fcuntion.
+    else if ((b1 == '0' || b1 == '0') && (b2 == '0' ||
         b2 == '0') && (b3 == '0' || b3 == '0')) {
         document.getElementById('print')
             .innerHTML = "Player 0 won";
@@ -130,9 +128,9 @@ function myfunc() {
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
-        window.alert('Player 0 won');
+     //   window.alert('Player 0 won');
     }
-    else if ((b1 == '0' || b1 == '0') && (b4 == '0' || 
+    else if ((b1 == '0' || b1 == '0') && (b4 == '0' ||
         b4 == '0') && (b7 == '0' || b7 == '0')) {
         document.getElementById('print')
             .innerHTML = "Player 0 won";
@@ -142,9 +140,9 @@ function myfunc() {
         document.getElementById("b6").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
-        window.alert('Player 0 won');
+     //   window.alert('Player 0 won');
     }
-    else if ((b7 == '0' || b7 == '0') && (b8 == '0' || 
+    else if ((b7 == '0' || b7 == '0') && (b8 == '0' ||
         b8 == '0') && (b9 == '0' || b9 == '0')) {
         document.getElementById('print')
             .innerHTML = "Player 0 won";
@@ -154,9 +152,9 @@ function myfunc() {
         document.getElementById("b4").disabled = true;
         document.getElementById("b5").disabled = true;
         document.getElementById("b6").disabled = true;
-        window.alert('Player 0 won');
+     //   window.alert('Player 0 won');
     }
-    else if ((b3 == '0' || b3 == '0') && (b6 == '0' || 
+    else if ((b3 == '0' || b3 == '0') && (b6 == '0' ||
         b6 == '0') && (b9 == '0' || b9 == '0')) {
         document.getElementById('print')
             .innerHTML = "Player 0 won";
@@ -166,9 +164,9 @@ function myfunc() {
         document.getElementById("b5").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
-        window.alert('Player 0 won');
+       // window.alert('Player 0 won');
     }
-    else if ((b1 == '0' || b1 == '0') && (b5 == '0' || 
+    else if ((b1 == '0' || b1 == '0') && (b5 == '0' ||
         b5 == '0') && (b9 == '0' || b9 == '0')) {
         document.getElementById('print')
             .innerHTML = "Player 0 won";
@@ -178,9 +176,9 @@ function myfunc() {
         document.getElementById("b6").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
-        window.alert('Player 0 won');
+//        window.alert('Player 0 won');
     }
-    else if ((b3 == '0' || b3 == '0') && (b5 == '0' || 
+    else if ((b3 == '0' || b3 == '0') && (b5 == '0' ||
         b5 == '0') && (b7 == '0' || b7 == '0')) {
         document.getElementById('print')
             .innerHTML = "Player 0 won";
@@ -190,9 +188,9 @@ function myfunc() {
         document.getElementById("b6").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
-        window.alert('Player 0 won');
+  //      window.alert('Player 0 won');
     }
-    else if ((b2 == '0' || b2 == '0') && (b5 == '0' || 
+    else if ((b2 == '0' || b2 == '0') && (b5 == '0' ||
         b5 == '0') && (b8 == '0' || b8 == '0')) {
         document.getElementById('print')
             .innerHTML = "Player 0 won";
@@ -202,9 +200,9 @@ function myfunc() {
         document.getElementById("b6").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b9").disabled = true;
-        window.alert('Player 0 won');
+    //    window.alert('Player 0 won');
     }
-    else if ((b4 == '0' || b4 == '0') && (b5 == '0' || 
+    else if ((b4 == '0' || b4 == '0') && (b5 == '0' ||
         b5 == '0') && (b6 == '0' || b6 == '0')) {
         document.getElementById('print')
             .innerHTML = "Player 0 won";
@@ -214,26 +212,26 @@ function myfunc() {
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
-        window.alert('Player 0 won');
+//        window.alert('Player 0 won');
     }
-  
+
     // Checking of Player 0 finsh. same as the x one it just enumares the whole board and checks if player 0 has made a winning combination
 
 
 
     // Here, Checking about Tie
-    else if ((b1 == 'X' || b1 == '0') && (b2 == 'X' 
-        || b2 == '0') && (b3 == 'X' || b3 == '0') && 
-        (b4 == 'X' || b4 == '0') && (b5 == 'X' || 
-        b5 == '0') && (b6 == 'X' || b6 == '0') && 
-        (b7 == 'X' || b7 == '0') && (b8 == 'X' || 
-        b8 == '0') && (b9 == 'X' || b9 == '0')) {
-            document.getElementById('print')
-                .innerHTML = "Match Tie";
-            window.alert('Match Tie');
+    else if ((b1 == 'X' || b1 == '0') && (b2 == 'X'
+        || b2 == '0') && (b3 == 'X' || b3 == '0') &&
+        (b4 == 'X' || b4 == '0') && (b5 == 'X' ||
+            b5 == '0') && (b6 == 'X' || b6 == '0') &&
+        (b7 == 'X' || b7 == '0') && (b8 == 'X' ||
+            b8 == '0') && (b9 == 'X' || b9 == '0')) {
+        document.getElementById('print')
+            .innerHTML = "Match Tie";
+        window.alert('Match Tie');
     }
     else {
-        
+
 
         //if there is no tie is keeps going and changes the players turn.
         // Here, Printing Result
@@ -247,9 +245,10 @@ function myfunc() {
         }
     }
 }
-  
+
 // Function to reset game. 
-//grabs all the inputs by teir ids and resets the board, restarting the game
+//grabs all the inputs by teir ids and resets the board, restarting the game. Simple function to clear the board of imputs. 
+//The reset button calls this fucntion. 
 
 function myfunc_2() {
     location.reload();
@@ -262,11 +261,13 @@ function myfunc_2() {
     document.getElementById("b7").value = '';
     document.getElementById("b8").value = '';
     document.getElementById("b9").value = '';
-  
+
 }
-  
-// Here onwards, functions check turn of the player 
-// and put accordingly value X or 0
+
+// This fucntion checks whos turn it is and assigns an x or an o.
+// depending on whos turn it is is on the click event.
+// Checks turn, puts value X or 0. It also handles all the marked board pieces, if a space is taken this function disables it.
+
 flag = 1;
 function myfunc_3() {
     if (flag == 1) {
@@ -280,7 +281,7 @@ function myfunc_3() {
         flag = 1;
     }
 }
-  
+
 function myfunc_4() {
     if (flag == 1) {
         document.getElementById("b2").value = "X";
@@ -293,7 +294,7 @@ function myfunc_4() {
         flag = 1;
     }
 }
-  
+
 function myfunc_5() {
     if (flag == 1) {
         document.getElementById("b3").value = "X";
@@ -306,7 +307,8 @@ function myfunc_5() {
         flag = 1;
     }
 }
-  
+// i think these functuions checks the input squares for either an x or an o and disables them if they are occpied.
+
 function myfunc_6() {
     if (flag == 1) {
         document.getElementById("b4").value = "X";
@@ -319,7 +321,7 @@ function myfunc_6() {
         flag = 1;
     }
 }
-  
+
 function myfunc_7() {
     if (flag == 1) {
         document.getElementById("b5").value = "X";
@@ -332,7 +334,7 @@ function myfunc_7() {
         flag = 1;
     }
 }
-  
+
 function myfunc_8() {
     if (flag == 1) {
         document.getElementById("b6").value = "X";
@@ -345,7 +347,7 @@ function myfunc_8() {
         flag = 1;
     }
 }
-  
+
 function myfunc_9() {
     if (flag == 1) {
         document.getElementById("b7").value = "X";
@@ -358,7 +360,7 @@ function myfunc_9() {
         flag = 1;
     }
 }
-  
+
 function myfunc_10() {
     if (flag == 1) {
         document.getElementById("b8").value = "X";
@@ -371,7 +373,7 @@ function myfunc_10() {
         flag = 1;
     }
 }
-  
+
 function myfunc_11() {
     if (flag == 1) {
         document.getElementById("b9").value = "X";
@@ -384,3 +386,8 @@ function myfunc_11() {
         flag = 1;
     }
 }
+
+//This whole block just makes sure no double moves can be made. It is the core of the game logic.
+
+
+//todo: Makea modal message that says oh player x won would tyouo like to go againand then a button that invoces the reset function //
