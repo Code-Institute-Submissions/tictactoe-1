@@ -46,7 +46,7 @@ This guy wrote a thing, i used this at first: https://dev.to/bornasepic/pure-and
 
 But i didnt like his implementation so i used this one: https://www.geeksforgeeks.org/simple-tic-tac-toe-game-using-javascript/. As a basis for my project.
 
-There is also this one that i havnt look at yet: https://dev.to/toufiqnuur/tic-tac-toe-game-with-vanilla-js-2f4a. 
+There is also this one that i havnt look at yet: https://dev.to/toufiqnuur/tic-tac-toe-game-with-vanilla-js-2f4a 
 
 My hope is that i will find some way to combine all fo these solutions in to one elegant original project. 
 

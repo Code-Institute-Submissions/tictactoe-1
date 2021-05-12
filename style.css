@@ -9,9 +9,18 @@ body {
     text-align: center;
     align-items: center;
     color: orange;
+    
 }
 
-#print {font-size: 3vh;}
+#title {
+    font-size: 4vh;
+}
+
+#subtitle {
+    font-size: 3vh;
+}
+
+#print { font-size: 4ch;}
 
 section {
     text-align: center;
@@ -23,6 +32,8 @@ section {
     width: 306px;
     margin: 50px auto;
     background-color: blueviolet;
+    border-radius: 5px;
+    border:rgb(51, 39, 131)
 }
 
 .cell {
@@ -44,11 +55,12 @@ section {
     height: 60px;
     border: 1px solid rgb(51, 39, 131);
     margin: auto;
-    border-radius: 4px;
+   /* border-radius: 5px; this makes it round */ 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: blueviolet;
+    border-color: orange;
     color: orange;
-    font-size: 20px;
+    font-size: 2vh;
     cursor: pointer;
 }
 
@@ -56,8 +68,8 @@ section {
 
 #ins {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: orangered;
-    font-size: 3vh;
+    color: orange;
+    font-size: 2vh;
 }
 
 /* 3*3 Grid */
