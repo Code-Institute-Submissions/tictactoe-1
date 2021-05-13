@@ -8,39 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Tic Tac Toe </title>
-
-    <!--bootstrap 4.6 scripts + font awsome-->
+    <!--bootstrap and Fa links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-
-    <!--EmailJs scripts 
-    script 0 -->
+    <!--Emailjs link-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("user_qymtgBsPpBFabMb2XEwym");
-        })();
-    </script>
-
-    <!--script 2-->
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-    <!--end of scripts-->
-
 </head>
 
 
@@ -96,7 +68,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col text-light">
-                    <button class="text-warning" id="modalbutton">Contact us!</button>
+                    <input class="btn" id="modalbutton" placeholder="Contact">
+
                 </div>
             </div>
         </div>
@@ -105,36 +78,46 @@
 
     <!--Contant form Modal-->
     <div id="myModal" class="modal" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog">
             <div class="modal-header modalstyle">
                 <h5 class="modal-title">Contact us directly by using this form.</h5>
-                <span class="close">&times;</span>
+            
             </div>
             <div class="modal-body modalstyle">
                 <div class="row">
                     <div class="col">
-                        <form id="contact-form">
-                            <input class="form-control"type="hidden" name="contact_number">
-                            <label>Name</label>
-                            <input class="form-control" type="text" name="user_name">
-                            <label>Email</label>
-                            <input class="form-control"type="email" name="user_email">
-                            <label>Message</label>
-                            <textarea class="form-control" name="message"></textarea>
-                            <input class="btn btn-dark" type="submit" value="Send">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" type="hidden" name="contact_number">
+                                <label>Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="user_name">
+                                <label>Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="user_email">
+                                <label>Message</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message"></textarea>
+                            </div>
+                            <button class="btn btn-dark" type="submit" value="Send">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-        <!--bootstrap scripts-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-        <!--link to the javascript.-->
-        <script src="script.js"> </script>
+    <!--link to the javascript.-->
+    <script src="game.js"></script>
+    <script src="modal.js"></script>
+    <!--bootstrap scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    
+    
 </body>
 
 </html>

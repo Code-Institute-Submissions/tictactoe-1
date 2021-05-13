@@ -58,12 +58,12 @@
     background-color:rgb(58, 45, 245);
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
 }
 
 /* modal styling */
 .modalstyle {background: blueviolet;}
-/* sction styling, making sure gameboard iscenter alwasy ******/
+
+/* section styling Centering the board and amaking sure it looks decent*/
 
 section {
     text-align: center;
@@ -86,7 +86,7 @@ section {
     font-size: 60px;
 }
 
-/* 3*3 Grid */
+/* Styles that makes up the game board, 3*3 Grid */
 
 #b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9 {
     width: 80px;
