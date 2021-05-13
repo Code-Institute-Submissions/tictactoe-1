@@ -228,7 +228,7 @@ function myfunc() {
             b8 == '0') && (b9 == 'X' || b9 == '0')) {
         document.getElementById('print')
             .innerHTML = "Match Tie";
-        window.alert('Match Tie');
+    //    window.alert('Match Tie');
     }
     else {
 
@@ -389,5 +389,30 @@ function myfunc_11() {
 
 //This whole block just makes sure no double moves can be made. It is the core of the game logic.
 
+//Modal Javascript //
 
-//todo: Makea modal message that says oh player x won would tyouo like to go againand then a button that invoces the reset function //
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("modalbutton");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

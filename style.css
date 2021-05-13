@@ -1,21 +1,70 @@
-/* this is the alternate css, if we decide to use this version */
-
-body {
+.body {
     background-color: #1d1f21;
     color: cornsilk;
 }
 
-.container {
-    text-align: center;
-    align-items: center;
-    color: orange;
-}
 /* font sizing for the text */
-#print {font-size: 3vh;}
-#title {font-size: 4vh;}
-#subtitle {font-size: 3vh;}
 
+#title {
+    font-size: 4vh;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Game Instruction Text */
+
+.ins {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orange;
+    font-size: 2vh;
+    justify-content: center;
+    text-align: center;
+}
+
+/*game status element" */
+
+#print {
+    font-size: 3vh;
+    justify-content: center;
+}
+
+/* Reset Button */
+
+#but {
+    box-sizing: border-box;
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(51, 39, 131);
+    margin: auto;
+    border-radius: 4px;
+    font-family: sans-serif;
+    background-color: blueviolet;
+    color: orange;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* contact button (modal */
+
+#modalbutton {
+    box-sizing: border-box;
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(51, 39, 131);
+    margin: auto;
+    border-radius: 4px;
+    font-family: sans-serif;
+    background-color:rgb(58, 45, 245);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* modal styling */
+.modalstyle {background: blueviolet;}
 /* sction styling, making sure gameboard iscenter alwasy ******/
+
 section {
     text-align: center;
 }
@@ -24,7 +73,7 @@ section {
     display: grid;
     grid-template-columns: repeat(3, auto);
     width: 306px;
-    margin: 50px auto;
+    margin: 60px auto;
     background-color: blueviolet;
 }
 
@@ -32,45 +81,36 @@ section {
     font-family: "Permanent Marker", cursive;
     width: 100px;
     height: 100px;
-    box-shadow: 0 0 0 1px #333333;
-    border: 1px solid #333333;
     cursor: pointer;
     line-height: 100px;
     font-size: 60px;
 }
-/* Reset Button */
-
-#but {
-    box-sizing: border-box;
-    width: 100px;
-    height: 60px;
-    border: 1px solid rgb(51, 39, 131);
-    margin: auto;
-    border-radius: 4px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: blueviolet;
-    color: orange;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Game Instruction Text */
-
-#ins {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:orange;
-    font-size: 2vh;
-}
 
 /* 3*3 Grid */
 
-#b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9 
-{
+#b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9 {
     width: 80px;
-    height: 60px;
+    height: 70px;
     background-color: darkorange;
     border-radius: 5px;
     font-size: 7vh;
     text-align: center;
     cursor: pointer;
 }
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {text-align: center;}

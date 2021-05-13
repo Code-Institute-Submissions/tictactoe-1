@@ -8,20 +8,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Tic Tac Toe </title>
+
+    <!--bootstrap 4.6 scripts + font awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!--EmailJs scripts 
+    script 0 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_qymtgBsPpBFabMb2XEwym");
+        })();
+    </script>
+
+    <!--script 2-->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <!--end of scripts-->
+
 </head>
 
-<body>
+
+<body class="body">
 
     <!--if the screen since is small, on glaxy fold force rotate of phone, scan viewport set relevent popup. add email integration on the bottom. -->
     <!--section that we want to use, goal is to implement the script to work on this gameboard-->
 
     <!-- Game Instructions -->
     <div class="container">
-        <p id="title">Tic Tac Toe</p>
-        <p id="subtitle">This is a simple tic tac toe game. You can play versus your friends.
-        </p>
-        <p id="ins">Start the game by tapping on a box.</p>
-        <p id="print"></p>
+        <p class="row" id="title">Tic Tac Toe</p>
+        <p class="row ins">Start the game by tapping on a box.</p>
+        <p class="row ins">X goes first.</p>
+        <p class="row" id="print"></p>
     </div>
     <!--Game board section-->
     <section>
@@ -57,12 +90,52 @@
         </div>
         <h2 class="game--status"></h2>
         <button id="but" onclick="myfunc_2()">
-            RESET </button>
+            Reset board</button>
     </section>
 
+    <footer class="mt-1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-light">
+                    <button class="text-warning" id="modalbutton">Contact us!</button>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!--link to the javascript.-->
-    <script src="script.js"> </script>
+
+    <!--Contant form Modal-->
+    <div id="myModal" class="modal" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-header modalstyle">
+                <h5 class="modal-title">Contact us directly by using this form.</h5>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body modalstyle">
+                <div class="row">
+                    <div class="col">
+                        <form id="contact-form">
+                            <input class="form-control"type="hidden" name="contact_number">
+                            <label>Name</label>
+                            <input class="form-control" type="text" name="user_name">
+                            <label>Email</label>
+                            <input class="form-control"type="email" name="user_email">
+                            <label>Message</label>
+                            <textarea class="form-control" name="message"></textarea>
+                            <input class="btn btn-dark" type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--bootstrap scripts-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+        <!--link to the javascript.-->
+        <script src="script.js"> </script>
 </body>
 
 </html>
